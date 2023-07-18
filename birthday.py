@@ -4,7 +4,7 @@ from datetime import datetime
 class Birthday(Field):
     def __init__(self, value=None) -> None:
         super().__init__(value)
-        self.value = value  # Виконуємо валідацію за допомогою сеттера
+        self.value = value  
 
     @Field.value.setter
     def value(self, new_value):
@@ -15,8 +15,7 @@ class Birthday(Field):
     def validate_birthday(self, birthday):
         if not birthday:
             return True
-
-        # Перевірка, чи дата народження має правильний формат 'YYYY-MM-DD'
+    
         try:
             datetime.strptime(birthday, "%Y-%m-%d")
             return True
