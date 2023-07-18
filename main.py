@@ -52,7 +52,7 @@ def days_to_birthday_command(*args):
 
 
 def exit_command(*args):
-    address_book.save_to_file("data.json")  # Зберігаємо дані у файл перед виходом
+    address_book.save_to_file("data.json")  
     return "Bye"
 
 
@@ -77,7 +77,7 @@ COMMANDS = {
     change_command: ("change", "зміни"),
     days_to_birthday_command: ("days_to_birthday", "день рождения"),
     exit_command: ("bye", "exit", "end"),
-    find_command: ("find", "search"),  # Додаємо команду для пошуку
+    find_command: ("find", "search", "знайти"),  
     show_all_command: ("show all",),
 }
 
