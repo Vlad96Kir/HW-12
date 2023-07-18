@@ -42,7 +42,7 @@ class AddressBook(UserDict):
     def __next__(self):
         if self._iter_index >= len(self.data):
             raise StopIteration
-        items_per_page = 3  # Adjust this number based on how many items you want per page
+        items_per_page = 3
         page_items = list(self.data.values())[self._iter_index:self._iter_index + items_per_page]
         self._iter_index += items_per_page
         return "\n".join(str(item) for item in page_items)
